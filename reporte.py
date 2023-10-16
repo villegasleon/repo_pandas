@@ -81,7 +81,9 @@ masaCorporal= data.groupby(['Occupation', 'Gender'])['BMI Category'].value_count
 masaCorporalOrder=masaCorporal.sort_values()
 print(masaCorporalOrder)
 
-
+#ocupaciones con peor sueño, masa corporal y cantidad de pasos
+integral= data.groupby('Occupation')[['Daily Steps','Physical Activity Level','Sleep Duration','Quality of Sleep']].mean()
+print(integral)
 
 
 
