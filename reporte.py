@@ -72,8 +72,15 @@ print(calidadSueno)
 
 #disticnion por la ocupacion y ordenamos con .sort()
 calidadSuenoXOcupa= data.groupby('Occupation')[['Sleep Duration', 'Quality of Sleep']].mean()
-calidadSuenoXOcupa.sort_values(by='Quality of Sleep')
-print(calidadSuenoXOcupa)
+calidadSuenoOcupOrdenado=calidadSuenoXOcupa.sort_values(by='Quality of Sleep')
+print(calidadSuenoOcupOrdenado)
+
+#indice de masa corporal por ocupaciones y genero
+masaCorporal= data.groupby(['Occupation', 'Gender'])['BMI Category'].value_counts()
+#ordenamos los datos para q sean mas legibles
+masaCorporalOrder=masaCorporal.sort_values()
+print(masaCorporalOrder)
+
 
 
 
