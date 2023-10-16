@@ -80,7 +80,7 @@ masaCorporal= data.groupby(['Occupation', 'Gender'])['BMI Category'].value_count
 #ordenamos los datos para q sean mas legibles
 masaCorporalOrder=masaCorporal.sort_values()
 print(masaCorporalOrder)
-
+##
 
 
 
