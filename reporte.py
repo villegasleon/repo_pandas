@@ -28,20 +28,20 @@ data = pd.read_csv('Sleep_health_and_lifestyle_dataset.csv',
 # la librería Pandas.
 
 #PRIMERO ANALIZAMOS LA INFORMACION QUE TENEMOS . Por ejemplo data.info para ver el resumen que es lo q tiene data
-#info=data.info()
-#print(info)
+info=data.info()
+print(info)
 #TENEMOS OTRA FUNCION que nos regresa un resumen especifico de las columnas donde se almacenan datos numericos
-#resumen=data.describe()
-#print(resumen)
+resumen=data.describe()
+print(resumen)
 
 #Aanalisis de edades
 #que numero de mujeres y hombres se les hizo esta encuesta?
-#genero = data['Gender'].value_counts()
-#print(genero)
+genero = data['Gender'].value_counts()
+print(genero)
 
 #vamos a conocer el promedio d ela edades de este conjunto de datos
-#edadesProm = data['Age'].mean()
-#print(edadesProm)
+edadesProm = data['Age'].mean()
+print(edadesProm)
 
 #vamos a agregar una columna a nuestro conjunto de datos, donde nos diga si la persona es adulto <40 o adulto viejo>40
 #si es menos de 40 le vamos a dar un nombre a la columna q vamos a agregar, la vamos a llamar Age_group, y aqui van a exisitir 2 clasificaciones : Adult y Older Adult
@@ -80,7 +80,9 @@ masaCorporal= data.groupby(['Occupation', 'Gender'])['BMI Category'].value_count
 #ordenamos los datos para q sean mas legibles
 masaCorporalOrder=masaCorporal.sort_values()
 print(masaCorporalOrder)
-##
+
+
+
 
 
 
