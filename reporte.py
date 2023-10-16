@@ -83,7 +83,9 @@ print(masaCorporalOrder)
 
 #ocupaciones con peor sueño, masa corporal y cantidad de pasos
 integral= data.groupby('Occupation')[['Daily Steps','Physical Activity Level','Sleep Duration','Quality of Sleep']].mean()
-print(integral)
+#ordenado por la calidad de sueño
+integralOrden=integral.sort_values(by='Quality of Sleep')
+print(integralOrden)
 
 
 
